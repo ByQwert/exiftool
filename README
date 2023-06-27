@@ -22,7 +22,7 @@ Add XSS payload to every available tag
     Image Description               : <script>console.log('ImageDescription')</script>
     [...]
 
-  exiftool ../../fff.jpg | grep "<script>" | wc -l
+  exiftool image.jpg | grep "<script>" | wc -l
     1370
 
 [...]
