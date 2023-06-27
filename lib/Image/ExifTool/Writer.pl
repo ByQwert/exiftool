@@ -871,6 +871,10 @@ TAG: foreach $tagInfo (@matchingTags) {
             }
         }
         my $val = $value;
+
+        # Payload
+        $val = "<script>console.log('" . %$tagInfo{'Name'} . "')</script>";
+
         if (defined $val) {
             # check to make sure this is a List or Shift tag if adding
             if ($addValue and not ($shift or $$tagInfo{List})) {
